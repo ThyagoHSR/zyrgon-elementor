@@ -1,0 +1,184 @@
+.content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+.content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    gap: 20px;
+    flex-wrap:wrap;
+    max-width: 100%;
+}
+.image-about {
+    margin-left:0px !important;
+    max-width: 100%; /* Garante que a imagem n���o ultrapasse a largura do slide */
+}
+.title-about {
+    color: #FF4713;
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align:center;
+}
+
+.description-about {
+    color: #53575A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 100%;
+    text-align:center;
+
+}
+.slider_about {
+        position: relative;
+    }
+
+    .swiper-button-next.slider-about-navigation,
+    .swiper-button-prev.slider-about-navigation {
+        position: absolute;
+        top: auto;
+        left: 50%;
+        transform: translateX(-60%);
+        margin-left:0px;
+    }
+
+    .swiper-button-prev.slider-about-navigation {
+        left: calc(50% - 30px); 
+    }
+
+    .swiper-button-next.slider-about-navigation {
+        left: calc(50% + 30px); 
+    }
+    .content-box{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:20px;
+        padding-bottom:2rem;
+}
+    .title-box-about{
+        color: var(--Orange, #FF4713);
+        font-family: Poppins;
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align:center;
+}
+}
+.caixa-imagem-container {
+    display: inline-block; 
+    vertical-align: top; 
+    margin-right: 20px; 
+    margin-bottom: 20px; 
+    width: calc(33.33% - 20px);
+    text-align: center;
+    cursor:pointer;
+}
+
+.caixa-imagem {
+    display: inline-block;
+    text-align: center; 
+}
+.content-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    padding-bottom:2rem;
+}
+
+
+.title-about {
+    color: #FF4713;
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.description-about {
+    color: #53575A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 100%;
+}
+
+.image-about {
+    max-width: 100%; /* Garante que a imagem n���o ultrapasse a largura do slide */
+}
+.title-box-about{
+    color: var(--Orange, #FF4713);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align:center;
+}
+.image-box-about{
+    width:83px;
+    height:83px;
+}
+.caixa-imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor:pointer;
+}
+
+.caixa-imagem img {
+    max-width: 100%;
+}
+
+.title-box-about {
+    margin-top: 10px;
+}
+.caixa-imagem {
+    opacity: 0.5;
+}
+
+.caixa-imagem.selecionado h2{
+    opacity: 1; /* Opacidade normal para o item selecionado */
+    color: var(--Orange, #FF4713);
+
+}
+.caixa-imagem.selecionado{
+    opacity: 1; /* Opacidade normal para o item selecionado */
+
+}
+
+.caixa-imagem img {
+    filter: grayscale(100%); /* Aplica escala de cinza a todas as imagens */
+}
+
+.caixa-imagem.selecionado img {
+    filter: none; /* Remove a escala de cinza para a imagem do item selecionado */
+}
+
+.caixa-imagem h2 {
+    color: #777; /* Define a cor do texto para um cinza claro */
+}
+.slider-about-navigation::after {
+    display: none; /* Oculta os pseudo-elementos dentro do carrossel slider_about */
+}
+
+.swiper-button-next svg, .swiper-button-prev svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+    margin-top: 100px;
+}
