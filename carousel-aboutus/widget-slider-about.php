@@ -82,6 +82,18 @@ class My_Widget_slider_about extends \Elementor\Widget_Base {
         'default' => __( 'Descrição predeterminado', 'plugin-name' ),
       ]
     );
+    $repeater->add_control(
+      'button_item',
+        [
+          'label' => __( 'Botão', 'plugin-name' ),
+          'type' => \Elementor\Controls_Manager::URL,
+          'default' => [
+            'url' => '#',  
+            'is_external' => false, 
+            'nofollow' => false,  
+          ],
+      ]
+    ); 
  
     $this->add_control(
       'list',
@@ -94,6 +106,7 @@ class My_Widget_slider_about extends \Elementor\Widget_Base {
             'image_item' => esc_html__( 'Item', 'elementor-pro' ),
             'title_item' => esc_html__( 'Item', 'elementor-pro' ),
             'description_item' => esc_html__( 'Item', 'elementor-pro' ),
+            'button_item' => esc_html__( 'Item', 'elementor-pro' ),
           ],
         ],
         'title_field' => '{{{ title_item }}}',
@@ -138,7 +151,7 @@ class My_Widget_slider_about extends \Elementor\Widget_Base {
             'title_box' => esc_html__( 'Item', 'elementor-pro' ),
           ],
         ],
-        'title_field' => '{{{ title_item }}}',
+        'title_field' => '{{{ title_box }}}',
       ]
     );
     
@@ -174,6 +187,9 @@ class My_Widget_slider_about extends \Elementor\Widget_Base {
         $html .= '<div class="content-text2">';
         $html .= '<h2 class="title-about">' . esc_html($item['title_item']) . '</h2>';
         $html .= '<p class="description-about">' . esc_html($item['description_item']) . '</p>';
+        if($item['button_item']['url'] !== '#'){
+        $html .= '<a href="' .  esc_url( $item['button_item']['url'] ) . '" class="button-about">Seja Prestador</a>';
+    }
         $html .= '</div>'; // .content-text
         $html .= '</div>'; // .content
         $html .= '</div>'; // .swiper-slide
