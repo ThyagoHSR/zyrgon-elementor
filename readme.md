@@ -18,6 +18,6 @@ public function init_widgets() {
         });
 	}
 ```
-## Widget Carousel about us => 
+## 🖼️ Widget Carousel about us
 
 <img src="imgs/carousel-aboutus-image.webp">
